@@ -1,0 +1,75 @@
+// c++ program for converting degree celsius into farehnit and kelvin 
+
+#include<iostream>
+
+using namespace std;
+
+   int main()
+   {
+       double f,c,k;
+       
+       int option;
+       
+       cout<<"Choose from the following options:-\n "<<endl;
+       
+       cout<<"1. Celsius to Farehnit"<<endl;
+       cout<<"2. Farehnit to Celsius"<<endl;
+       cout<<"3. Celsius to Kelvin"<<endl;
+       cout<<"4. kelvin to Celsius"<<endl;
+       
+       cout<<"\n\nChoose 1,2,3 or 4 from the given menu---->";
+       cin>>option;
+       cout<<endl;
+       
+       switch(option)
+       {                       //option for converting Celsius into Farehnit 
+           case 1:
+           {
+               cout<<"Enter the temperature in Celsius :";
+               cin>> c;
+               
+               f= (1.8 * c)+32.0;    // Tempature conversion formula 
+               cout<<"\n  Tempature in degree Farehnit :"<<f<<"F"<<endl;
+           }
+           break;
+                                     //option for converting Farehnit into Celsius
+           case 2:
+           {
+               
+               cout<<"Enter the temperature in Farehnit :";
+               cin>> f;
+               
+               c= (f-32)/1.8;        // Tempature conversion formula 
+               cout<<"\n  Tempature in degree Celsius :"<<c<<"C"<<endl;
+           }
+           break;
+                                       //option for converting Celsius into kelvin
+           
+            case 3:
+            {
+                cout<<"Enter the temperature in Celsius :";
+               cin>> k;
+               
+               k = c + 273.15;      // Tempature conversion formula 
+               cout<<"\n  Tempature in degree kelvin :"<<k<<"K"<<endl;
+            }
+            break;
+                               //option for converting kelvin into Celsius
+            case 4:
+            {
+                cout<<"Enter the temperature in kelvin :";
+               cin>> k;
+               
+               c= k- 273.15;       // Tempature conversion formula 
+               cout<<"\n  Tempature in degree Celsius :"<<c<<"C"<<endl;
+            }
+            break;
+            
+               default :
+               {
+                   cout<<"Wrong input";
+               }
+               
+        }
+       return 0;
+   }
